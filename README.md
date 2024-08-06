@@ -1,6 +1,6 @@
 # Image-Processor
 
-This project applies advanced image processing methods, including:
+This project applies image processing methods, including:
 
 - Frequency domain filtering (high-pass and low-pass) using OpenCV in Python.
 - Morphological operators to segment the main object in the image.
