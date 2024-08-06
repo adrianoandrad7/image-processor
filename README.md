@@ -1,19 +1,22 @@
 # Image-Processor
 
-Este projeto aplica filtragem no domínio da frequência (passa alta e passa baixa) usando OpenCV em Python.
+This project applies advanced image processing methods, including:
 
-## Requisitos
+- Frequency domain filtering (high-pass and low-pass) using OpenCV in Python.
+- Morphological operators to segment the main object in the image.
+
+## Requirements
 
 - Python 3.x
 - OpenCV
 - NumPy
 - Matplotlib
 
-## Configuração
+## Setup
 
-1. Crie um ambiente virtual:
+1. Create a virtual environment:
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # Para Linux/macOS
-venv\Scripts\activate     # Para Windows
+source venv/bin/activate  # For Linux/macOS
+venv\Scripts\activate     # For Windows

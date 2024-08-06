@@ -7,9 +7,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import cv2
 import matplotlib.pyplot as plt
 from filter import apply_frequency_filter  
+from filter import segment_object
 
 def main():
-    image_path = 'images/baixados_Symp.jpg'
+    
+    # 01 low_pass_filtered and high_pass_filtered
+    image_path = ''
     image = cv2.imread(image_path)
     if image is None:
         print(f"Erro ao carregar a imagem {image_path}")
@@ -21,6 +24,16 @@ def main():
     plt.subplot(132), plt.imshow(low_pass_filtered, cmap='gray'), plt.title('Filtro Passa Baixa')
     plt.subplot(133), plt.imshow(high_pass_filtered, cmap='gray'), plt.title('Filtro Passa Alta')
     plt.show()
-
+    
+    
+    # 02  Segmentar objeto
+    image = cv2.imread(image_path)
+    resultado = segment_object(image)
+    
+    # Salvar o resultado
+    output_path = ''
+    cv2.imwrite(output_path, resultado)
+    
+    
 if __name__ == "__main__":
     main()
